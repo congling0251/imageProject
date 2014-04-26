@@ -339,7 +339,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ImageProc.cs" />
-    <Compile Include="Image_Info.cs" />
     <Compile Include="image_view.ascx.cs">
       <DependentUpon>image_view.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -42,18 +42,18 @@ namespace image
 
         //Generate and save miniature(for image list display), 
         //len is the width or height of the miniature
-        //public void SaveMiniImage(string savePath, int len)
-        //{
-        //    double scale = 0;
+        public void SaveMiniImage(string savePath, int len)
+        {
+            double scale = 0;
 
-        //    if (height > width)
-        //        scale = (double)len / (double)height;
-        //    else
-        //        scale = (double)len / (double)width;
+            if (height > width)
+                scale = (double)len / (double)height;
+            else
+                scale = (double)len / (double)width;
 
-        //    Image<Bgr, Byte> img_mini = img_src.Resize(scale, INTER.CV_INTER_LINEAR);
-        //    img_mini.Save(savePath);
-        //}
+            Image<Bgr, Byte> img_mini = img_src.Resize(scale, INTER.CV_INTER_LINEAR);
+            img_mini.Save(savePath);
+        }
 
         //Calculate image's HSV histogram using unmanaged OpenCV invoke
         /*Need to know if managed emgu version is better*/
