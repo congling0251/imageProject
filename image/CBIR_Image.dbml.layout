@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.875" name="CBIR_Image">
+  <DataContextMoniker Name="/CBIR_ImageDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3e561b68-0ec0-4eb7-b2f3-9d8affbe9b52" absoluteBounds="0.625, 6.375, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfe676f0-31b3-46bb-81a5-0917dee423ac" absoluteBounds="0.64000000000000012, 6.835, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d958ee8d-998d-47d3-bcee-be8d595acf34" absoluteBounds="0.625, 7.5, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_Color" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f26d8e9-b504-4bbc-bfd0-eb794a9b291e" absoluteBounds="0.64, 7.96, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dce55fbd-4a6e-4b95-808a-b022d3677486" absoluteBounds="3, 6.25, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbb0e3b2-d1b4-4254-8645-b4329b1c98a8" absoluteBounds="3.015, 6.71, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 8.10563781738281); (3 : 8.10563781738281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CBIR_ImageDataContext/Image_Color/Image_Color_Image_info" />
+      <nodes>
+        <classShapeMoniker Id="d958ee8d-998d-47d3-bcee-be8d595acf34" />
+        <classShapeMoniker Id="dce55fbd-4a6e-4b95-808a-b022d3677486" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43c6d012-5b07-4a2f-8069-d680fc806d4b" absoluteBounds="2.75, 9.125, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_Museum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3733dfe-d52a-4150-a713-a98fcc22d73a" absoluteBounds="2.765, 9.585, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="414edf2b-da07-4f1f-b712-5f17d245dfd3" absoluteBounds="5, 9.125, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_Period" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0fe41e81-7d1c-4c4d-b676-cfe5bd1c494f" absoluteBounds="5.015, 9.585, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02f1a100-ec13-455a-9de7-ea80c4972a1b" absoluteBounds="5.25, 6.5, 2, 2.4612756347656251">
+      <DataClassMoniker Name="/CBIR_ImageDataContext/Image_Shape" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df5a5937-e068-4b0a-988e-6ef4c9d49547" absoluteBounds="5.265, 6.96, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

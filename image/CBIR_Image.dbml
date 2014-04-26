@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="image" Class="CBIR_ImageDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=afei-pc\sqlexpress;Initial Catalog=image;User ID=afei" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="imageConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Image_Category" Member="Image_Category">
+    <Type Name="Image_Category">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Intro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image_Color" Member="Image_Color">
+    <Type Name="Image_Color">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Red" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Green" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Blue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hsv" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Distant" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RGB" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Image_Color_Image_info" Member="Image_info" ThisKey="ID" OtherKey="ColorID" Type="Image_info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image_info" Member="Image_info">
+    <Type Name="Image_info">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tag" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Intro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MuseumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PeriodID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShapeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Image_Color_Image_info" Member="Image_Color" ThisKey="ColorID" OtherKey="ID" Type="Image_Color" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image_Museum" Member="Image_Museum">
+    <Type Name="Image_Museum">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Intro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WebSite" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image_Period" Member="Image_Period">
+    <Type Name="Image_Period">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Intro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Image_Shape" Member="Image_Shape">
+    <Type Name="Image_Shape">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="s1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s4" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s5" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s6" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="s7" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Distant" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
